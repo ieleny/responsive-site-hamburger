@@ -1,0 +1,188 @@
+/* CoverFlow */
+.coverflow {
+	height: 100px;
+	border-bottom: solid 2px black;
+}
+
+.coverflow .cover {
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	font-size: 500%;
+	border: solid 2px black;
+	text-align: center;
+
+	background: #e2e2e2; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2UyZTJlMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2RiZGJkYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2QxZDFkMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZWZlZmUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e2e2e2), color-stop(50%,#dbdbdb), color-stop(51%,#d1d1d1), color-stop(100%,#fefefe)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=0 ); /* IE6-8 */
+}
+
+.coverflow .cover.current {
+	opacity: 1;
+	border-bottom: none;
+
+	box-shadow:	0 0 16px rgba(0,0,0,.5);
+
+	background: #ffffff; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2YzZjNmMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2VkZWRlZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f3f3f3), color-stop(51%,#ededed), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
+}
+.coverflow .cover.current:after {
+	content:			' ';
+	background-color:	white;
+	display:			block;
+	position:			absolute;
+	width:				132px;
+	height:				16px;
+	left:				-16px;
+	bottom:				-16px;
+}
+
+#photos-info {
+	position:		relative;
+	text-align:		center;
+	z-index:		1000;
+	text-shadow:	0 0 8px white;
+}
+
+#photos-name {
+	font-size: 200%;
+	font-weight: bold;
+}
+
+.clearfix {
+	clear: both;
+}
+
+#photos-button{
+	padding-top: 2%;
+}
+
+/* BUTTON */
+ :root {
+	--text-color: hsla(210, 50%, 85%, 1);
+	--shadow-color: hsla(210, 40%, 52%, .4);
+	--btn-color: hsl(35, 100%, 38%);
+	--bg-color: #141218;
+  }
+  
+  * {
+	box-sizing: border-box;
+  }
+
+  #photos-button a {
+
+	position:relative;
+	padding: 10px 20px;  
+	border: none;
+	background: none;
+	cursor: pointer;
+	
+	font-family: "Source Code Pro";
+	font-weight: 0;
+	text-transform: uppercase;
+	font-size: 20px;  
+	color: var(--text-color);
+	
+	background-color: var(--btn-color);
+	box-shadow: var(--shadow-color) 2px 2px 22px;
+	border-radius: 4px; 
+	z-index: 0;  
+	overflow: hidden;  
+
+  }
+  
+  #photos-button a:focus {
+	outline-color: transparent;
+	box-shadow: var(--btn-color) 2px 2px 22px;
+  }
+  
+  .right::after, #photos-button a::after {
+	content: var(--content);
+	display: block;
+	position: absolute;
+	white-space: nowrap;
+	padding: 40px 40px;
+	pointer-events:none;
+  }
+  
+  #photos-button a::after{
+	font-weight: 200;
+	top: -30px;
+	left: -20px;
+  } 
+  
+  .right, .left {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+  }
+  .right {
+	left: 66%;
+  }
+  .left {
+	right: 66%;
+  }
+  .right::after {
+	top: -30px;
+	left: calc(-66% - 20px);
+	
+	background-color: var(--bg-color);
+	color:transparent;
+	transition: transform .4s ease-out;
+	transform: translate(0, -90%) rotate(0deg)
+  }
+  
+  #photos-button a:hover .right::after {
+	transform: translate(0, -47%) rotate(0deg)
+  }
+  
+  #photos-button a .right:hover::after {
+	transform: translate(0, -50%) rotate(-7deg)
+  }
+  
+  #photos-button a .left:hover ~ .right::after {
+	transform: translate(0, -50%) rotate(7deg)
+  }
+  
+  /* bubbles */
+  #photos-button a::before {
+	content: '';
+	pointer-events: none;
+	opacity: .6;
+	background:
+	  radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+	  radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+	  radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+  
+	width: 100%;
+	height: 300%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	animation: bubbles 5s linear infinite both;
+  }
+  
+  @keyframes bubbles {
+	from {
+	  transform: translate();
+	}
+	to {
+	  transform: translate(0, -66.666%);
+	}
+  }
